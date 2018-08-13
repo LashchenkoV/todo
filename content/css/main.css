@@ -1,0 +1,361 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    color: #e6e8ee;
+}
+*{font-family: "Droid Sans Mono", monospace;}
+input, select, textarea{outline: none;}
+a{transition: 0.1s;text-decoration: none;}
+a,select,textarea, input, a:visited{color: #e6e8ee}
+.col-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/**EXIT BUTTTon*/
+.exit{
+    position: absolute;
+    width: 44px;
+    height: 40px;
+    left: 50%;
+    margin-left: -22px;
+    background: #2c3e50;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top: none;
+    transition: .3s;
+}
+.exit a:hover {
+    color: rgba(255, 0, 0, 1);
+    text-shadow: 0 0 20px rgba(255,0,0,0.45);
+}
+.exit a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: rgba(255, 0, 0, 0.62);
+}
+#content{display: flex;}
+#content .nav{min-width: 260px;}
+#content .content{
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #34495e;
+
+}
+#content .content .title{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 15px;
+    font-size: 25px;
+    -moz-user-select: none; /* Mozilla Firefox */
+    -ms-user-select: none; /* Internet Explorer (не поддерживается) */
+    -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
+}
+#content .content .title .add-consultation a{margin-right: 35px;transition: 0.1s}
+#content .content .title .add-consultation a:hover{color:#16a085 ;}
+#content .content .title .info{display: flex}
+#content .content .title .time{margin-left: 40px}
+
+.consultation-table{
+    width: 100%;
+    margin-top: 10px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.consultation-table tbody tr{
+    cursor:pointer ;
+}
+.consultation-table tbody tr:hover{
+    background: #16a085;
+}
+.consultation-table th, td{
+    height: 20px;
+    text-align: left;
+    padding: 10px;
+}
+.consultation-table tr {
+    border-bottom:1px solid #48647a;
+}
+.consultation-table tr{
+     height: 50px;
+}
+.consultation-table a{
+    font-size: 20px;
+    transition: 0.1s
+}
+.option{
+    text-align: center;
+}
+.consultation-table a:hover{color:#16a085}
+
+.consultation-table .name{
+    min-width: 400px;
+}
+.consultation-table .group{
+    min-width: 200px;
+}
+.min-table{
+    font-size: 15px;
+}
+.min-table td{
+    padding: 5px;
+}
+.content .title .date{
+    display: flex;
+}
+.content .info .flex-center>i{
+    color: rgba(230, 232, 238, 0.15);
+    font-size: 200px;
+    transform: rotate(-25deg);
+    transform-origin: center;
+}
+
+.content .info{
+    margin-top: 60px;
+    box-sizing: border-box;
+    width: 400px;
+    left: 90%;
+    margin-left: 10px;
+    background: #48647a;
+    padding: 5px;
+    display: flex;
+    flex-direction:column;
+
+}
+.content .info .title{
+    display: flex;
+}
+.content .info .title .date{
+    font-size: 15px;
+    color: #c2c3c9;
+}
+.content .info .title .btn-close{
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+/**---------------LOGIN-AND-REGISTER-----*/
+
+.form{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width: 350px;
+    background: #34495e;
+    margin-left: -175px;
+    margin-top: -200px;
+    display: flex;
+    flex-direction:column;
+}
+.form .title{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2c3e50;
+    color:#16a085;
+
+}
+.form .content{
+    margin-top: 30px;
+}
+.form .content .fields{
+    width: 100%;
+    padding-top: 10px;
+}
+#entryBtn, #register{width: 310px;margin-top: 30px}
+.form .links a:hover{color: #1bcbab;}
+.form .links a{color: rgba(17, 165, 140, 0.58);}
+.form .links{
+    background: #2c3e50;
+    width: 100%;
+    margin-top: 20px;
+    justify-content:flex-end;
+    padding-top: 10px;
+    padding-right: 40px;
+}
+/**-------BUTTON-------*/
+
+.button{
+    border: none;
+    font-size: 16px;
+    padding:  10px 15px 10px 15px ;
+    color:#e6e8ee;
+    background: #48647a;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.1s;
+}
+.button:hover{
+    background:#16a085;
+}
+
+/**-------------MODAL-WINDOW----------*/
+#bg-layer {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    opacity: 0.5;
+    display: none;
+}
+.modal{
+    display: none;
+    z-index: 2;
+    position: absolute;
+    width: 900px;
+    min-height: 350px;
+    top:50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -450px;
+    background: #34495e;
+}
+.modal-error{
+    width:300px;
+    min-height: 100px;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+.modal-confirm{
+    width:400px;
+    min-height: 200px;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+.modal-confirm p, .modal-error p{
+    margin: 10px;
+}
+.modal-confirm .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 10px;
+}
+.tab{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background: #48647a;
+}
+.tab div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.tab .button{
+    border-radius: 0;
+}
+.active{
+    background: #16a085;
+}
+
+.tabcontent{
+    padding: 15px;
+}
+.header-tab{
+    display: flex;
+    flex-direction: column;
+}
+.tabcontent .footer-tab a{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.modal .tab .btn-close{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.btn-close a:hover, .btn-close:hover{
+    color: rgb(255, 88, 59);
+}
+
+.red:hover{
+    background: rgb(255, 88, 59);
+}
+
+input[type="text"], textarea, input[type="password"] {
+    background:#34495e;
+    border:1px solid #48657c;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
+    border:1px solid #6d94b3;
+}
+
+
+/**-----------SELECT--------*/
+.tabcontent select{
+    background: #48647a;
+    padding: 8px;
+    border: 0;
+    border-radius: 5px 5px 0 0;
+    font-size:16px;
+    margin-bottom:10px
+}
+
+/**----------LEFT MENU---------*/
+.left-menu {
+    display:flex;
+    flex-direction:column;
+    background: #2c3e50;
+    width: 250px;
+    padding: 5px;
+    list-style: none;
+    position: fixed;
+}
+
+.left-menu li a {
+    background: #34495e;
+    margin-bottom: 2px;
+    padding-left: 10px;
+    height: 40px;
+    display:flex;
+    align-items:center;
+    font-size: 16px;
+    transition: all 0.2s linear;
+}
+
+.left-menu li a:hover {
+    border-left: 5px solid #16a085;
+}
+
+.left-menu li a {
+    border-left: 5px solid #34495e;
+}
+.left-menu li a i {
+    font-size: 16px;
+    padding-right: 8px;
+}
+
+.left-menu li.selected a {
+    background: #16a085;
+    border-left: 5px solid #16a085;
+}
